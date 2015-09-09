@@ -1,0 +1,159 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Monochromed by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Komputerowa wizualizacja działania systemu SHP</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Anaheim&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body>
+
+
+	<!-- Header -->
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+						<h1><a href="#">Komputerowa wizualizacja działania systemu SHP </a></h1>
+					</div>
+				
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li ><a href="index.html">Główna</a></li>
+							<li class="active"><a href="1oshp.html">O SHP</a></li>
+							<li ><a href="wizualizacja.html">Wizualizacja</a></li>
+						</ul>
+					</nav>
+
+			</div>
+		</div>
+	<!-- Header -->
+			
+	<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row">
+
+					<!-- Sidebar -->
+						<div id="sidebar" class="4u">
+							<section>
+								<header>
+									<h2></h2>
+									<span class="byline"></span>
+								</header>
+								<ul class="default">
+									
+									<li><a href="1oshp.html">Wstęp teoretyczny</a></li>
+									<li>Budowa SHP  :</li>
+										<ul class="default">
+											<li style='text-indent: 10%'><a href="2budowaSHPtor.html">Urządzenia przytorowe</a></li>
+											<li style='text-indent: 10%'><a href="3budowaSHPkab.html">Urządzenia kabinowe</a></li>
+											<li style='text-indent: 10%'><a href="4zasilanie.html">Zasilanie urządzeń SHP</a></li>
+										</ul>
+									<li><a href="5stanzasadniczy.html">Stan zasadniczy urządzenia</a></li>
+									<li><a href="6uklelekt.html">Układ elektryczny SHP</a></li>
+									<li><a href="7schemideowEDA.html">Schemat ideowy układu tranzystorowego generatora EDA</a></li>
+									<li><a href="8upruklprzekaz.html">Uproszczony układ przekaźnikowy</a></li>
+									<li><a href="9schematideowy.html">Schemat ideowy urządzenia SHP dla pojazdu trakcyjnego z zasilaniem 110V i dwiema kabinami sterowniczymi </a></li>
+								</ul>
+							</section>
+						</div>
+					<!-- Sidebar -->
+				
+					<!-- Content -->
+						<div id="content" class="8u skel-cell-important">
+							<section>
+								<header>
+									<h2>Schemat ideowy układu tranzystorowego generatora EDA</h2>
+									
+												
+								</header>
+								<div align="justify">
+								<p style='text-indent: 5%'>Generator EDA jest jednym z podstawowych zespołów urządzenia SHP. Składa się on ze źródła prądu zmiennego, elektronicznego przekaźnika impulsów oraz przekaźnikowego układu sterującego. </p> 
+								<p style='text-indent: 5%'>Na rysunku (Rys. 1.10) przedstawiony został schemat ideowy układu tranzystorowego generatora EDA, układ ten jest zasilany prądem stałym o napięciu 24V. Zadaniem tego układu jest zasilanie czujnika i utrwalenie przekazywanej z toru informacji, zostaje ona utrwalona zmianą stanu przekaźnika elektronicznego. Stan tego przekaźnika powtarza przekaźnik elektromagnetyczny zwany sterującym S. Przekaźnik ten steruje przekaźnikami PS i T.</p>
+										<div align="center">
+											<a target="_blank" href="grafika\schemat_ideowy_ukl_tranzystorowego_generatora_EDA.png" width="100%" height="100%"><img src="grafika\schemat_ideowy_ukl_tranzystorowego_generatora_EDA.png" width="65%" height="65%" border="0" /></a><br>
+      											Rys. 1.10: Schemat ideowy układu tranzystorowego generatora EDA
+										</div>
+									<h2>Stan zasadniczy</h2>
+								<p style='text-indent: 5%'>Po włączeniu napięcia zasilającego generator wytwarza napięcie zmienne o częstotliwości 1000 Hz. Dla ułatwienia dostrojenia generatora, autotransformator Tr1 ma odczepy, które umożliwiają dobór odpowiedniej pojemności kondensatorów C1 i C2, które tworzą dzielnik prądowy, z którego realizowane jest sprzężenie zwrotne warunkujące podtrzymanie drgań. </p>
+								<p style='text-indent: 5%'>Wysterowanie następnego stopnia (separatora) następuje z dzielnika pojemnościowego (C1, C2) generatora. Wzmacniacz ten (z tranzystorem T2) jest wykonany w układzie ze wspólnym emiterem. Oporniki R4 i R6 ustalają mu odpowiedni punkt pracy. Ujemne sprzężenie zwrotne, poprawiające stałość wzmocnienia, jest realizowane dla prądu stałego przez opornik R6, a dla prądu zmiennego przez opornik R4. Obciążenie separatora stanowi równoległy obwód rezonansowy (czujnik). Kolektor tranzystora T2 jest połączony autotransformatorowo z cewką czujnika z przekładnią 1 : 3.</p>
+								<p style='text-indent: 5%'>Następny stopień ( kluczujący z tranzystorem T3) pracuje w układzie ze wspólnym emiterem. Otrzymuje on wysterowanie i jednocześnie polaryzację bazy z dzielnika oporowego R18 i R8. Emiter tranzystora T3 jest zasilany z pętli sprzężenia zwrotnego połączonej przez filtr dolnoprzepustowy  (C7, C4, R10, R13). Dobrą stałość wzmocnienia zapewnia tu bardzo silne ujemne sprzężenie zwrotne, uzyskiwane za pomocą uzwojenia 5-6 transformatora Tr2, który stanowi obciążenie tranzystora T3. Stabilizację termiczną umożliwia duża wartość oporu w emiterze R10 i R13. Z uzwojenia wtórnego transformatora Tr2 następuje wysterowanie stopnia mocy, w którym pracuje tranzystor T4 w układzie ze wspólnym emiterem. </p>
+								<p style='text-indent: 5%'>Oporniki R5, R9 i R15 ustalają punkt pracy tego transformatora. Dzięki opornikowi regulowanemu R14 uzyskuje się korekcję wzmocnienia tego stopnia i tym samym czułości urządzenia. Napięciem z uzwojenia wtórnego transformatora Tr3, wyprostowanym na prostowniku diodowym ( D3 i D4) jest zasilany przekaźnik elektromagnetyczny S, a przez pętlę sprzężenia zwrotnego – tranzystor T3.</p>
+									<h2>Stan zadziałania</h2>
+								<p style='text-indent: 5%'>Podczas przesuwania się czujnika nad rezonatorem następuje chwilowe zaniżenie napięcia o około 90% zasilającego czujnik, natomiast stopień kluczujący (tranzystor T3) zostaje zablokowany już przy 50% obniżeniu napięcia, jest to określone progiem czułości urządzenia. Zaniżenie napięcia zmiennego zasilającego czujnik zmniejsza wysterowanie przez stopień kluczujący – stopnia mocy. Wskutek tego maleje napięcie zasilające przekaźnik S i tym samym naięcie zasilające (przez pętlę sprzężenia zwrotnego) tranzystor T3. Następuje zanik napięcia w obwodzie przekaźnika S, przekaźnik ten rozwiera swoje zestyki, które sterują układem przekaźnikowym urządzenia.</p>
+								<p style='text-indent: 5%'>Wzbudzenie układu następuje przez podanie plusa ze źródła zasilającego ten układ (przez zestyk P) do kondensatora C5-6 znajdującego się w obwodzie emitera T3. Płynie wówczas krótkotrwały prąd ładowania tego kondensatora, który odblokowuje układ. Kondensator ten jest zabezpieczeniem przed stałym podawaniem plusa w razie unieruchomienia przycisku w stanie wciśniętym. Opornik R21 rozładowuje kondensator C5-6  po odblokowaniu układu. Opornik R19 przeciwdziała obniżeniu się czułości blokowania przy wciśniętym na stałe przycisku czujności. Kondensator C9 wraz z opornikiem redukcyjnym R11 stanowi filtr zaporowy dla napięć zakłócających.</p>
+								</div>
+
+							</section>
+						</div>
+					<!-- /Content -->
+						
+				</div>
+			
+			</div>
+		</div>
+	<!-- Main -->
+
+	<!-- Footer -->
+		<div id="footer">
+			<nav id="nav">
+						<ul>	
+									
+									<li><a href="1oshp.html">Wstęp teoretyczny</a></li>
+									<li><a href="2budowaSHPtor.html">Budowa SHP</a></li>
+									<li><a href="5stanzasadniczy.html">Stan zasadniczy </a></li>
+									<li><a href="6uklelekt.html">Układ elektryczny</a></li>
+									<li class="active"><a href="7schemideowEDA.html">Schemat ideowy generatora EDA</a></li>
+									<li><a href="8upruklprzekaz.html">Układ przekaźnikowy</a></li>
+									<li><a href="9schematideowy.html">Schemat ideowy urządzenia SHP</a></li>
+								
+						</ul>
+					</nav>
+
+		</div>
+	<!-- Footer -->
+
+	<!-- Copyright -->
+		<div id="copyright">
+			
+				<style>
+     
+  					.holder{
+    					 text-align: center;
+  						}
+				</style>
+				<div class="holder" style="float:center">
+      					<div class="newsfeed_photo">
+      					<a href="...">
+          					<img alt="Small" class="photo_thumb_frame" src="grafika\pk.jpg"  width="3%" height="3%" />
+      					</a></div>
+      					<div class="newsfeed_date">
+      					Politechnika Krakowska <br> Kamil Różycki
+      					</div>
+				</div>
+				
+		</div>
+
+	</body>
+</html>

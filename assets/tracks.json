@@ -1,0 +1,8 @@
+{
+    "isCycle": false,
+    "points": [
+        {"x": 1000, "y": 330, "sensor": false},
+        {"x": 430, "y": 340, "sensor": true},
+        {"x": -200, "y": 330, "sensor": false}
+    ]
+}

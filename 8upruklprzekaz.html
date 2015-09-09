@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Monochromed by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Komputerowa wizualizacja działania systemu SHP</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Anaheim&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body>
+
+
+	<!-- Header -->
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+						<h1><a href="#">Komputerowa wizualizacja działania systemu SHP</a></h1>
+					</div>
+				
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li ><a href="index.html">Główna</a></li>
+							<li class="active"><a href="1oshp.html">O SHP</a></li>
+							<li ><a href="wizualizacja.html">Wizualizacja</a></li>
+						</ul>
+					</nav>
+
+			</div>
+		</div>
+	<!-- Header -->
+			
+	<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row">
+
+					<!-- Sidebar -->
+						<div id="sidebar" class="4u">
+							<section>
+								<header>
+									<h2></h2>
+									<span class="byline"></span>
+								</header>
+								
+								<ul class="default">
+									
+									<li><a href="1oshp.html">Wstęp teoretyczny</a></li>
+									<li>Budowa SHP  :</li>
+										<ul class="default">
+											<li style='text-indent: 10%'><a href="2budowaSHPtor.html">Urządzenia przytorowe</a></li>
+											<li style='text-indent: 10%'><a href="3budowaSHPkab.html">Urządzenia kabinowe</a></li>
+											<li style='text-indent: 10%'><a href="4zasilanie.html">Zasilanie urządzeń SHP</a></li>
+										</ul>
+									<li><a href="5stanzasadniczy.html">Stan zasadniczy urządzenia</a></li>
+									<li><a href="6uklelekt.html">Układ elektryczny SHP</a></li>
+									<li><a href="7schemideowEDA.html">Schemat ideowy układu tranzystorowego generatora EDA</a></li>
+									<li><a href="8upruklprzekaz.html">Uproszczony układ przekaźnikowy</a></li>
+									<li><a href="9schematideowy.html">Schemat ideowy urządzenia SHP dla pojazdu trakcyjnego z zasilaniem 110V i dwiema kabinami sterowniczymi </a></li>
+								</ul>
+							</section>
+						</div>
+					<!-- Sidebar -->
+				
+					<!-- Content -->
+						<div id="content" class="8u skel-cell-important">
+							<section>
+								<header>
+									<h2>Uproszczony układ przekaźnikowy</h2>
+									
+												
+								</header>
+								<div align="justify">
+								<p style='text-indent: 5%'>Rozwarcie zestyków przekaźnika sterującego S jest początkiem działania układu przekaźnikowego. Praca układu będzie omówiona na przykładzie schematu (Rys. 1.11). Wyróżnia się poszczególne stany urządzenia:</p>
+									<p style='text-indent: 1%'>- włączenie urządzenia,</p>
+									<p style='text-indent: 1%'>- wzbudzenie – stan zasadniczy,</p>
+									<p style='text-indent: 1%'>- zadziałanie – potwierdzenie czujności,</p>
+									<p style='text-indent: 1%'>- zadziałanie – brak potwierdzenia czujności – samoczynne hamowanie,</p>
+									<p style='text-indent: 1%'>- odblokowanie po hamowaniu,</p>
+									<p style='text-indent: 1%'>- wyłączanie urządzenia.</p>
+										<div align="center">
+											<a target="_blank" href="grafika\uproszczony_schemat_urzadzenia_SHP_z_1kab.png" width="100%" height="100%"><img src="grafika\uproszczony_schemat_urzadzenia_SHP_z_1kab.png" width="40%" height="40%" border="0" /></a><br>
+      											Rys. 1.11: Uproszczony schemat urządzenia SHP dla pojazdu z  jedną kabiną sterowniczą
+										</div>
+								<p style='text-indent: 5%'>Na powyższym schemacie można wyróżnić takie elementy jak:</p>
+									<p style='text-indent: 1%'>- WG – wyłącznik główny (wyłącznik elektryczny sprzężony z kurkiem odcinającym);</p>
+									<p style='text-indent: 1%'>- U~ – napięcie zmienne 1000 Hz;</p>
+									<p style='text-indent: 1%'>- S – przekaźnik sterujący;</p>
+									<p style='text-indent: 1%'>- Pr – prostownik;</p>
+									<p style='text-indent: 1%'>- Sz – szybkościomierz, gdzie „0” oznacza zestyk szybkościomierza (zwarty przy V?10 km/h);</p>
+									<p style='text-indent: 1%'>- Rej – elektromagnes pisaka rejestrującego;</p>
+									<p style='text-indent: 1%'>- CW – kondensator w obwodzie wzbudzenia;</p>
+									<p style='text-indent: 1%'>- Dz – dioda zabezpieczająca układ tranzystorowy przed mylnym podłączeniem biegunów źródła zasliającego;</p>
+									<p style='text-indent: 1%'>- PS – przekaźnik sterujący sygnalizatorem dźwiękowym;</p>
+									<p style='text-indent: 1%'>- P – przekaźnik pomocniczy obwodu wzbudzenia (odblokowywania);</p>
+									<p style='text-indent: 1%'>- T – przekaźnik czasowy (odwzbudzenie opóźnione o 5s);</p>
+									<p style='text-indent: 1%'>- EZ – przekaźnik sterujący zaworem ekektropneumatycznym;</p>
+									<p style='text-indent: 1%'>- Pcz – przycisk czujności;</p>
+									<p style='text-indent: 1%'>- Bu – sygnalizator dźwiękowy (buczek);</p>
+									<p style='text-indent: 1%'>- LK – lampka kontroli napięcia zasilającego;</p>
+									<p style='text-indent: 1%'>- Cz – czujnik;</p>
+									<p style='text-indent: 1%'>- K0 – kurek odcinający w przewodzie sprzężonego powietrza;</p>
+									<p style='text-indent: 1%'>- Zel – zawór elektropneumatyczny;</p>
+									<p style='text-indent: 1%'>- Zc – zawór czuwaka;</p>
+									<p style='text-indent: 1%'>- W1 i W2 – wylot do atmosfery;</p>
+									<p style='text-indent: 1%'>- r – rurka łącząca.</p>
+								<p style='text-indent: 5%'>Przekaźnik sygnałowy PS steruje sygnałem akustycznym oraz pisakiem rejestrującym w szybkościomierzu. W starszych typach generatora EDA zestyki pracowały w układzie niezależnym natomiast w nowych wersjach generatora pracują szeregowo. Przekaźnik ten jest dwuuzwojeniowy i przewidziany do pracy w układzie przeciwsobnym. Jego budowa jest podobna do budowy przekaźnika sterującego. Przekaźnik czasowy T steruje przekaźnikiem EZ. Jest opóźniony na rozwieranie zestyków za pomocą kondensatorów. Przekaźnik pomocniczy P jest sterowany dźwignią (przyciskiem) czujności, zestyki jego pracują w układzie szeregowym i jest wykonany tak samo jak przekaźnik S. Przekaźnik zaworu elektropneumatycznego EZ ma trzy pary zestyków zwiernych, z których środkowe są wzmocnione, natomiast skrajne mają wykonanie normalne, wykorzystywane są tylko dwie pary zestyków, jedna para wzmocniona i jedna normalna. Przez zestyk wzmocniony EZ1 jest sterowana cewka przy zaworze elektropneumatycznym, drugi zestyk EZ2 pr											   acuje w obwodzie wzbudzenia stopnia kluczującego.</p>
+									<h2>Włączenie urządzenia</h2>
+								<p style='text-indent: 5%'>Włączenie urządzenia następuje po ustawieniu wyłącznika głównego WG w pozycji 'załączone', zasila to jednocześnie dwa układy, elektryczny i pneumatyczny. Po zamknięciu obwodu zasilania lampki kontrolnej Lk oraz włączeniu zasilania (przez diodę Dz) generatora, separatora i stopnia mocy urządzanie jest w stanie gotowości do przyjęcia informacji. </p>
+								<p style='text-indent: 5%'>Generator zaczyna wytwarzać napięcie 1000 Hz, którym wysterowuje separator, który zasila czujnik i wejście stopnia kluczującego (będącego w stanie niewzbudzonym). Stopień mocy nie ma wysterowania, przekaźnik S jest odwzbudzony. </p>
+								<p style='text-indent: 5%'>Przez zestyk bierny niewzbudzonego jeszcze przekaźnika PS jest zasilany sygnalizator akustyczny Bu, przez ten sam zestyk PS zasilany jest elektromagnes pisaka rejestrującego Rej. Sprzężone powietrze uchodzi z obwodu pneumatycznego do atmosfery, przez co klocki hamulcowe są dociskane do kół. </p>
+								<p style='text-indent: 5%'>Aby urządzenie zostało wzbudzone czyli ustawić do stanu zasadniczego należy nacisnąć krótkotrwale dźwignię czujności Pcz.</p>
+									<h2>Wzbudzenie – stan zasadniczy</h2>
+								<p style='text-indent: 5%'>Po naciśnięciu dźwigni czujności następuje zamknięcie zestykiem Pcz obwodu zasilania przekaźnika pomocniczego P, który zwiera swój zestyk w obwodzie wzbudzenia stopnia kluczującego. Plus źródła zasilającego układ tranzystorowy jest podawany na kondensator wzbudzenia Cw, co powoduje krótkotrwały przepływ prądu ładowania kondensatora. Prąd ten wzbudza kluczujący, który przechodzi w stan przewodzenia. Stopień kluczujący wysterowuje stopień mocy, który zasila przez prostownik Pr przekaźnik sterujący S oraz przez pętlę sprzężenia zwrotnego – stopień kluczujący. Następnie przekaźnik S wzbudza się i zwiera swój zestyk zwierny przez co zostają zasilone dwa przekaźniki: czasowy T i sygnałowy PS.</p>
+								<p style='text-indent: 5%'>Przekaźnik PS stopuje pracę sygnalizatora dźwiękowego Bu i elektromagnesu pisaka rejestrującego Rej. Przekaźnik T natomiast zamyka obwód zasilania przekaźnika EZ, który zwiera zestyki EZ1 i EZ2.</p>
+								<p style='text-indent: 5%'>Przez zestyk EZ1 zostaje zasilony zawór elektropneumatyczny Zel, co przerywa ulot sprzężonego powietrza do atmosfery. Dzięki temu zawór czuwaka zamyka główny wylot W1. Pojazd zostaje odhamowany.</p>
+								<p style='text-indent: 5%'>W tym samym czasie zestyk EZ2 przygotował drugi obwód do odblokowania stopnia kluczującego.</p>								
+								<p style='text-indent: 5%'>Zwolnienie dźwigni czujności przerywa zasilanie przekaźnika pomocniczego P. Urządzenie jest w stanie zasadniczym, pojazd trakcyjny rozpoczyna jazdę.</p>
+									<h2>Zadziałanie – potwierdzenie czujności</h2>
+								<p style='text-indent: 5%'>Pojazd trakcyjny przejeżdża nad rezonatorem, następuje oddziaływanie na czujnik. Napięcie na jego zaciskach maleje. Przekaźnik elektroniczny blokuje się, przekaźnik sterujący S odwzbudza się i przerywa swoim zestykiem obwody wzbudzenia przekaźników PS i T. </p>
+								<p style='text-indent: 5%'>Przekaźnik PS swoim zestykiem uruchamia sygnalizator dźwiękowy Bu i elektromagnes pisaka rejestrującego Rej.</p>
+								<p style='text-indent: 5%'>Przekaźnik T ze względu na zwłoczne odwzbudzanie przez 5 s ma zwarte zestyki, co za tym idzie przez jego zestyk jest zasilany przekaźnik EZ.</p>
+								<p style='text-indent: 5%'>Maszynista poinformowany sygnałem dźwiękowym o przejechaniu nad rezonatorem potwierdza swoją czujność krótkotrwałym naciśnięciem dźwigni czujności. Wzbudza się wówczas przekaźnik pomocniczy P. Kondensator CW zostaje zasilony przez przekaźnik P i zwarty jeszcze w tym czasie zestyk EZ2.</p>
+								<p style='text-indent: 5%'>Prąd ładowania kondensatora odblokowuje stopień kluczujący, ten przechodzi w stan przewodzenia i wysterowuje wzmacniacz mocy. Przekaźnik S zostaje zasilony przez napięcie, które pojawiło się na wyjściu wzmacniacza mocy, a przez pętlę sprzężenia zwrotnego zasilony zostaje stopień kluczujący. Przekaźnik S zwiera zestyk S i zamyka obwód zasilania przekaźników PS i T. Przekaźnik PS przerywa obwód zasilania sygnalizatora dźwiękowego oraz pisaka. Następuje powrót urządzenia do stanu zasadniczego, pojazd trakcyjny kontynuuje jazdę.</p>
+									<h2>Zadziałanie – brak potwierdzenia czujności – samoczynne hamowanie</h2>
+								<p style='text-indent: 5%'>Przejazd nad rezonatorem powoduje zablokowanie przekaźnika elektronicznego i odwzbudzenie przekaźnika sterującego S, przekaźnik PS zwiera swój zestyk. Uruchamia się sygnalizator dźwiękowy oraz pisak rejestrujący. Przekaźnik czasowy T pozostaje jeszcze w stanie wzbudzonym przez 5 s.</p>
+								<p style='text-indent: 5%'>Maszynista nie naciska w tym czasie przycisku czujności. Po upływie 5 s przekaźnik T odzwbudza się i rozwiera zestyk T w obwodzie zasilania przekaźnika EZ. Przekaźnik ten odzwzbudza się i rozwiera zestyki EZ1 i EZ2. Zestyk EZ1 przerywa obwód wzbudzenia zaworu elektropneumatycznego, który wypuszcza powietrze do atmosfery. Reaguje na to zawór czuwaka, który wypuszcza przez wylot W1 sprężone powietrze z przewodu głównego do atmosfery. Następuje hamowanie.</p>
+									<h2>Odblokowanie po hamowaniu</h2>
+								<p style='text-indent: 5%'>Gdy szybkość hamowanego pociągu zmaleje poniżej 10 km/h wówczas zestyk zerowy „0” zostaje rozwarty. Maszynista naciska przycisk czujności, co powoduje wzbudzenie przekaźnika P. Poprzez jego zwarty zestyk i zwarty zestyk zerowy jest podawany plus na kondensator CW. Płynie prąd ładowania kondensatora, który wzbudza przekaźnik elektroniczny, ten zaś wzbudza przekaźnik sterujący S. Przekaźnik PS oraz T zostają wzbudzone, sygnalizator milknie. </p>
+								<p style='text-indent: 5%'>Przekaźnik T powoduje wzbudzenie przekaźnika EZ, który zwiera zestyki EZ1 i EZ2. Powietrze przestaje uchodzić od atmosfery, następuje odhamowanie pociągu. Zwolnienie dźwigni czujności przerywa zasilanie przekaźnika P i następuje powrót urządzenia do stanu zasadniczego.</p>
+									<h2>Wyłączenie urządzenia</h2>
+								<p style='text-indent: 5%'>Po zatrzymaniu pociągu urządzenie SHP wyłącza się przez przełożenie dźwigni wyłącznika głównego w pozycję „wyłączone”. Tracą zasilanie wszystkie obwody elektryczne. Przekaźnik czasowy T jest opóźniony na odwzbudzanie, jego zestyki będą zwarte jeszcze przez ok 5 s.</p>							
+
+
+
+
+
+
+
+								</div>
+
+							</section>
+						</div>
+					<!-- /Content -->
+						
+				</div>
+			
+			</div>
+		</div>
+	<!-- Main -->
+
+<!-- Footer -->
+		<div id="footer">
+			<nav id="nav">
+						<ul>	
+									
+									<li><a href="1oshp.html">Wstęp teoretyczny</a></li>
+									<li><a href="2budowaSHPtor.html">Budowa SHP</a></li>
+									<li><a href="5stanzasadniczy.html">Stan zasadniczy </a></li>
+									<li><a href="6uklelekt.html">Układ elektryczny</a></li>
+									<li><a href="7schemideowEDA.html">Schemat ideowy generatora EDA</a></li>
+									<li class="active"><a href="8upruklprzekaz.html">Układ przekaźnikowy</a></li>
+									<li><a href="9schematideowy.html">Schemat ideowy urządzenia SHP</a></li>
+								
+						</ul>
+					</nav>
+
+		</div>
+	<!-- Footer -->
+
+	<!-- Copyright -->
+		<div id="copyright">
+			
+				<style>
+     
+  					.holder{
+    					 text-align: center;
+  						}
+				</style>
+				<div class="holder" style="float:center">
+      					<div class="newsfeed_photo">
+      					<a href="...">
+          					<img alt="Small" class="photo_thumb_frame" src="grafika\pk.jpg"  width="3%" height="3%" />
+      					</a></div>
+      					<div class="newsfeed_date">
+      					Politechnika Krakowska <br> Kamil Różycki
+      					</div>
+				</div>
+				
+		</div>
+
+	</body>
+</html>
