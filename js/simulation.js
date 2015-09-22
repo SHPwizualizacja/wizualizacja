@@ -8,32 +8,32 @@ var opis11 = 'Pociąg w ruchu, znajduje się przed punktem oddziaływania, urzą
 var opis12 = 'Przejazd nad rezonatorem powoduje zablokowanie przekaźnika elektronicznego, zostaje uruchomiony sygnalizator świetlny i pisak rejestrujący.';
 var opis13 = 'Brak reakcji maszynisty powoduje włączenie sygnału dźwiękowego.';
 var opis14 = '';
-var opis15 = 'Zostaje przerwane zasilanie zaworu elektropneumatycznego, który sterując zaworem czuwaka rozpoczyna hamowanie.';
-var opis16 = 'Maszynista naciska przycisk czujności, następuje powrót urządzenia do stanu zasadniczego.';
+var opis15 = 'Zostaje przerwane zasilanie zaworu elektropneumatycznego, który sterując zaworem czuwaka rozpoczyna hamowanie.\nAby zrestartować symulację naciśnij ⬛.';
+var opis16 = 'Maszynista naciska przycisk czujności, następuje powrót urządzenia do stanu zasadniczego. Pociąg swobodnie przejeżdża.\nAby zrestartować symulację naciśnij ⬛.';
 
 // mode = 1, semaphorMode = 1
 var opis21 = 'Pociąg w ruchu, znajduje się przed punktem oddziaływania, urządzenie SHP jest gotowe do odbioru informacji z toru.';
 var opis22 = 'Przejazd jest uzależniony od wskazań semafora, który wskazuje "Stój", rezonator oddziałowuje na czujnik powoduje to zablokowanie przekaźnika elektronicznego, zostaje uruchomiony sygnalizator świetlny i pisak rejestrujący.';
 var opis23 = 'Brak reakcji maszynisty powoduje włączenie sygnału dźwiękowego.';
 var opis24 = '';
-var opis25 = 'Zostaje przerwane zasilanie zaworu elektropneumatycznego, który sterując zaworem czuwaka rozpoczyna hamowanie.';
-var opis26 = 'Maszynista naciska przycisk czujności, następuje powrót urządzenia do stanu zasadniczego.';
+var opis25 = 'Zostaje przerwane zasilanie zaworu elektropneumatycznego, który sterując zaworem czuwaka rozpoczyna hamowanie.\nAby zrestartować symulację naciśnij ⬛.';
+var opis26 = 'Maszynista naciska przycisk czujności, następuje powrót urządzenia do stanu zasadniczego. Pociąg swobodnie przejeżdża.\nAby zrestartować symulację naciśnij ⬛.';
 
 // mode = 1, semaphorMode = 0
 var opis31 = 'Pociąg w ruchu, znajduje się przed punktem oddziaływania, urządzenie SHP jest gotowe do odbioru informacji z toru.';
 var opis32 = 'Przejazd jest uzależniony od wskazań semafora, który wskazuje "droga wolna", zostaje zwarty obwód rezonatora, co nie powoduje zadziałania urządzenia SHP w pociągu';
 var opis33 = opis32;
-var opis34 = 'Pociąg swobodnie przejeżdża';
+var opis34 = 'Pociąg swobodnie przejeżdża.\nAby zrestartować symulację naciśnij ⬛.';
 
 var shpInfo = 'Zadziałało SHP!! Należy odblokować urządzenie';
-var startInfo1 = "Aby rozpocząć symulację naciśnij przycisk ▶ na górze ekranu.\nAby zmienić prędkość pociągu użyj nastawnika po prawej stronie.";
-var startInfo23 = "Aby rozpocząć symulację naciśnij przycisk ▶ na górze ekranu.\nAby zmienić prędkość pociągu użyj nastawnika po prawej stronie.\nAby zmienić sygnał wyświetlany na semaforze kliknij w semafor.";
+var startInfo1 = "Aby rozpocząć symulację naciśnij przycisk ▶ na górze ekranu,\naby wstrzymać użyj ▎ ▎, natomiast do zrestartowania użyj ⬛.\nAby zmienić prędkość pociągu użyj nastawnika po prawej stronie.";
+var startInfo23 = "Aby rozpocząć symulację naciśnij przycisk ▶ na górze ekranu,\naby wstrzymać użyj ▎ ▎, natomiast do zrestartowania użyj ⬛.\nAby zmienić prędkość pociągu użyj nastawnika po prawej stronie.\nAby zmienić sygnał wyświetlany na semaforze kliknij w semafor.";
 
 var Sensor = function(game, x, y) {
     Phaser.Sprite.call(this, game, x, y, 'sensor');
+    this.game.physics.enable(this, Phaser.Physics.ARCADE);
 	this.scale.setTo(0.5, 0.5);
     this.anchor.setTo(0.5, 0.1);
-    this.game.physics.enable(this, Phaser.Physics.ARCADE);
     //this.width = 100;
     //this.height = 20;
 }
@@ -58,14 +58,16 @@ ReactionButton.prototype.stopAnimation = function() {
 
 var Train = function(game, points, gap, isCycle) {
     Phaser.Sprite.call(this, game, 0, 0, 'train');
-	this.scale.setTo(0.35, 0.35);
-    this.anchor.setTo(0.5, 1);
     this.game.physics.enable(this, Phaser.Physics.ARCADE);
+	this.scale.setTo(-0.35, 0.35);
+    this.anchor.setTo(0.5, 1);
 
-	this.sensor = game.add.sprite(0, 0, 'trainSensor');
+	this.sensor = game.add.sprite(200, 0, 'trainSensor');
 	this.sensor.alpha = 0;
+    this.sensor.anchor.setTo(0.5, 0.5);
     this.game.physics.enable(this.sensor, Phaser.Physics.ARCADE);
 	this.addChild(this.sensor);
+	
 		
     this.points = points;
     this.currentPointIt = 0;
@@ -270,7 +272,7 @@ Main.prototype = {
         this.sensors = this.game.add.group();
         this.drawSensors(this.sensors, this.tracksJSON.points);
         this.reactionTimer = this.game.time.create(false);
-		this.reactionTimer.repeat(Phaser.Timer.SECOND * 1.5, 2, this.checkReaction, this);
+		this.reactionTimer.repeat(Phaser.Timer.SECOND * 2.5, 2, this.checkReaction, this);
 		this.ringingSound = this.game.add.audio('ringing', 0.5, true);
 		
         //TRAIN
@@ -283,7 +285,7 @@ Main.prototype = {
         //}
 		//SEMAPHORE
         if (this.game.mode != 0) {
-			this.semaphor = this.game.add.button(10, 150, 'semaphor', this.semaphorClick, this, 0, 0, 0, 0);
+			this.semaphor = this.game.add.button(940, 150, 'semaphor', this.semaphorClick, this, 0, 0, 0, 0);
 			this.game.semaphorMode = 0;
 		}
 		
@@ -320,6 +322,7 @@ Main.prototype = {
 		this.controlPanel.y = 400;
 		
 		this.speedControl = this.controlPanel.add(new Phaser.Button(this.game, 50, 10, 'speedControl', this.speedControlClick, this, 0, 0, 0, 0));
+		this.speedControl.inputEnabled = false;
 		this.trainSpeed = 0;
 		
 		/*this.speedControl = this.controlPanel.add(new Phaser.Sprite(this.game, 200, 100, 'speedControl', 1));
@@ -328,7 +331,6 @@ Main.prototype = {
 		this.speedControl.input.enableDrag();
 		this.speedControl.input.allowHorizontalDrag = false;
 		this.speedControl.input.boundsRect = new Phaser.Rectangle(0, 25, 400, 150);*/
-		this.speedControl.input.useHandCursor = true;
 		
 		this.trainSpeedLabel = this.controlPanel.add(new Phaser.Text(this.game, 10, 100, '0', {
             font: '30px "Anaheim",sans-serif',
@@ -366,6 +368,8 @@ Main.prototype = {
 				break;
 				
 			case this.game.CurrentStateEnum.START:
+				this.speedControl.inputEnabled = true;
+				this.speedControl.input.useHandCursor = true;
 				if (this.game.mode === 0) {
 					this.descriptionText.setText(opis11);
 				} else {
@@ -480,6 +484,13 @@ Main.prototype = {
 			this.isTrainOverSensor = this.game.physics.arcade.overlap(this.train.sensor, this.sensors, this.needReaction, null, this);
 		} else {
 			this.isTrainOverSensor = this.game.physics.arcade.overlap(this.train.sensor, this.sensors, null, null, this);
+		}
+		if (this.game.currentState != this.game.CurrentStateEnum.BEFORE_START && this.game.mode === 1 && this.game.semaphorMode == 0 && this.semaphor.frame === 0) {
+			var trainBounds = this.train.sensor.getBounds();
+			trainBounds.x += 180;
+			if (Phaser.Rectangle.intersects(this.semaphor.getBounds(), trainBounds)) {
+				this.semaphor.setFrames(1, 1, 1, 1);
+			};
 		}
 		//this.trainSpeed = this.speedControl.y - 50;
 		this.trainSpeedLabel.setText(this.trainSpeed.toString());
